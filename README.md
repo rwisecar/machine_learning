@@ -36,9 +36,9 @@ The analysis looks at:
 
 # Working with Imperfect Data
 
-This Jupyter Notebook was based on a dataset from the Seattle Police Department, outlining response times to 911 calls within the city of Seattle, as of February 5, 2017.
+This Jupyter Notebook was based on a dataset from the Seattle Police Department, outlining Incident Reports in the city of Seattle, as of January 28, 2017.
 
-The dataset can be found here: https://data.seattle.gov/Public-Safety/Seattle-Police-Department-911-Incident-Response/3k2p-39jp
+The dataset can be found here: https://data.seattle.gov/Public-Safety/Seattle-Police-Department-Police-Report-Incident/7ais-f98f
 
 ## Attribute Information:
 
@@ -61,3 +61,9 @@ The dataset can be found here: https://data.seattle.gov/Public-Safety/Seattle-Po
 17. Initial Type Subgroup
 18. Initial Type Group
 19. At Scene Time
+
+## Process
+
+The data was originally displayed in rows of information separated by commas. The first row contained the column names, also separated by commas. To access this information, I created a Pandas dataframe that specified the comma as the delimiter, and the first row as the header row. I set low_memory to False, because the data set included a mix of data types. 
+
+Because these column names consisted of multi-word strings, often with spaces between the words, I wound up renaming them as simple, shortened strings (ex: "DESC"). This made it easier to use these names to access information.
